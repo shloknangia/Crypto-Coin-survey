@@ -17,6 +17,8 @@ export class TheFormComponent implements OnInit {
     comments: ''
   };   
 
+  todaysDate = new Date();
+
   constructor(public coinservice: CoinServiceService) { }
 
   ngOnInit() {

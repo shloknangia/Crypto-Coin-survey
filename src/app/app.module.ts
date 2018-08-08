@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TheFormComponent } from './the-form/the-form.component';
 import { CoinServiceService } from './coin-service.service';
 import { FormSubmittedComponent } from './form-submitted/form-submitted.component';
+import { YesNoPipe } from './yes-no.pipe';
 
 
 // we can have different pages
@@ -22,7 +23,8 @@ const routes = [
   declarations: [
     AppComponent,
     TheFormComponent,
-    FormSubmittedComponent
+    FormSubmittedComponent,
+    YesNoPipe
   ],
   imports: [
     BrowserModule,
