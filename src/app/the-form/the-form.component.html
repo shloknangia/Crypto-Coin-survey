@@ -1,0 +1,30 @@
+<div class="row">
+
+  <div class="col-md-6">
+    <label for="name" class="font-weight-bold">Name</label>
+    <input type="text" id="name" class="form-control"[(ngModel)] = "coinSurvey.name">
+  </div>
+
+  <!-- drop down -->
+  <!-- once get a data from api populate it -->
+  <div class="col-md-6">
+    <label for="coin" class="font-weight-bold">Favourite coin</label>
+    <select  id="coin" class="form-control"[(ngModel)] = "coinSurvey.favouriteCoin">
+      <option [value]="coin.name" *ngFor = "let coin of top100coins">{{coin.name}}</option>
+    </select>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <label for="comments" class="font-weight-bold">Comments</label>
+    <textarea id="comments" class="form-control"[(ngModel)] = "coinSurvey.comments"></textarea>
+      </div>
+</div>
+
+<div class="row mt-2">
+  <div class="col-md-12">
+      <button class="btn btn-outline-success btn-block" (click) = "sendForm()">Send Form</button>
+  </div>
+</div>

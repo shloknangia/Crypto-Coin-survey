@@ -1,16 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component';
+import { TheFormComponent } from './the-form/the-form.component';
+import { CoinServiceService } from './coin-service.service';
+import { FormSubmittedComponent } from './form-submitted/form-submitted.component';
+
+const routes = [
+  { path: '', component: TheFormComponent },
+  { path: 'submitted', component: FormSubmittedComponent}
+];
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TheFormComponent,
+    FormSubmittedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [CoinServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
