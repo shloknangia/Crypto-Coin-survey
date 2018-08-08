@@ -9,6 +9,8 @@ import { TheFormComponent } from './the-form/the-form.component';
 import { CoinServiceService } from './coin-service.service';
 import { FormSubmittedComponent } from './form-submitted/form-submitted.component';
 
+
+// we can have different pages
 const routes = [
   { path: '', component: TheFormComponent },
   { path: 'submitted', component: FormSubmittedComponent}
